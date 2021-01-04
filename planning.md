@@ -20,16 +20,15 @@
   
 ### Turn
 - Description: displays new scores for both players and "new turn" message at the end of each turn, displays "game over" and winner's score when one player runs out of lives.
-- Methods
+- Methods:
   - initialize: current_player (provided as argument).
   - next_turn: displays scores and "new turn" message after each turn. 
   - game_over: displays winning player number and score, and "game over" message.
 
 ### Question
-- Description: generates two random numbers between 1 and 20, creates question with those 2 numbers. 
-- Methods:
-  - initialize: current_player (provided as argument), number_1 and number_2 (generated randomly between 1 and 20)
-  - get_question: return question using number_1 and number_2
+- Description: generates two random numbers (number_1 and number_2) between 1 and 20, creates question with those 2 numbers and calculates answer by adding them together. 
+- Method:
+  - generate_question: creates question using number_1 and number_2 and calculates answer as number_1 + number_2
 
 
   
