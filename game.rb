@@ -1,10 +1,5 @@
-require './player'
-require './question'
 class Game
-
   NUMBER_OF_LIVES = 3
-
-  # attr_reader :number, :score
 
   def initialize
     @player_1 = Player.new(1, NUMBER_OF_LIVES)
@@ -16,18 +11,11 @@ class Game
   def display_question
     @question.generate_question
     puts "Player #{@current_player.number}: #{@question.question}"
-    # @question.answer
   end
 
   def evaluate_answer
-    # result = false
-    # correct_answer = self.display_question
     print "> "
     player_answer = gets.chomp.to_i
-    # if player_answer == @question.answer
-    #   result = true
-    # end
-    # result
     player_answer == @question.answer
   end
 
@@ -40,11 +28,6 @@ class Game
   end
   
   def switch_player
-    # if @current_player == @player_1
-    #   @current_player = @player_2
-    # else
-    #   @current_player = @player_1
-    # end
     @current_player = @current_player == @player_1 ? @player_2 : @player_1
   end
 
@@ -53,7 +36,6 @@ class Game
     if @player_1.score > 0 && @player_2.score > 0
       puts "----- NEW TURN -----"
     end
-    #switch_player
   end
 
   def game_over(winner)
